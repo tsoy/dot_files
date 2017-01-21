@@ -7,7 +7,7 @@ case "$OSTYPE" in
     darwin*|linux*)  
 		alias s="cd  /var/www/subscribe" ;;
     msys*|cygwin*)
-		alias s="cd  /c/xammp/htdocs/subscribe.dev" ;;
+		alias s="cd  /c/xampp/htdocs/subscribe.dev" ;;
 esac
 
 function merd {
