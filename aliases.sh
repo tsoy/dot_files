@@ -1,9 +1,19 @@
-alias s="cd  ~/antarctic/ubuntu/www/subscribe"
+# OS independent aliases
+alias go_src="cd ~/antarctic/go/src/github.com/tsoy"
 
-alias merd="
-branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
-git checkout develop
-git pull
-git checkout $branch
-git merge develop
-"
+# OS dependent aliases
+
+case "$OSTYPE" in
+    darwin*|linux*)  
+		alias s="cd  /var/www/subscribe" ;;
+    msys*|cygwin*)
+		alias s="cd  /c/xammp/htdocs/subscribe.dev" ;;
+esac
+
+function merd {
+    branch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+    git checkout develop
+    git pull
+    git checkout $branch
+    git merge develop
+}
