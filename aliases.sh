@@ -5,7 +5,8 @@ alias go_src="cd ~/antarctic/go/src/github.com/tsoy"
 
 case "$OSTYPE" in
     darwin*|linux*)  
-		alias s="cd  /var/www/subscribe" ;;
+		alias s="cd  /var/www/subscribe" ;
+		alias mon="cd  /var/www/monitoring.dev" ;;
     msys*|cygwin*)
 		alias s="cd  /c/xampp/htdocs/subscribe.dev" ;;
 esac
